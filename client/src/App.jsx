@@ -8,7 +8,6 @@ const App = () => {
   const [messages, setMessages] = useState([]);
   const [messageInput, setMessageInput] = useState("");
 
-  // Register listener ONCE
   useEffect(() => {
     socket.on("message", (message) => {
       setMessages((prevMessages) => [...prevMessages, message]);
